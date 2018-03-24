@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css</title>
+</head>
+<style>
+	a ul li div span h1 h2 h3 h4 h5 img input{margin:0;padding: 0;list-style: none;}
+	.container{height: 1000px;width: 100%; background-color: #eee;}
+	.box{height: 200px;width: 100%;}
+	.box1{display: flex;align-items: center;justify-content:center;}
+	.box2{display: flex;align-items: center;justify-content:center;}
+	.box3{
+		
+		top: 0px;
+		left: 0px;
+		bottom: -50px;
+		right: 0px;
+		animation: shake 1.9s ease-in-out infinite;
+	}
+/* box1 */
+	.box>ul>li {
+		width: 20px;height: 20px;margin: 10px;
+		list-style-type: none;
+		transition: 0.5s all ease;
+		float: left;
+	}
+	
+	.box ul li:nth-child(1){
+		height: 20px;width: 20px; 
+		animation: right-1 1s infinite alternate;
+	  	background-color: #DDD8B8;
+	  	animation-delay: 100ms;
+	}
+	@keyframes right-1
+	{
+	0% {transform: translateY(-30px);}
+	100% {transform: translateY(30px);}
+	}
+	.box ul li:nth-child(2){
+		height: 20px;width: 20px; 
+		animation: right-2 1s infinite alternate;
+	  	background-color: #DDD877;
+	  	animation-delay: 200ms;
+	}
+	@keyframes right-2
+	{
+	0% {transform: translateY(-30px);}
+	100% {transform: translateY(30px);}
+	}
+	.box ul li:nth-child(3){
+		height: 20px;width: 20px; 
+		animation: right-3 1s infinite alternate;
+	  	background-color: #DDD820;
+	  	animation-delay: 300ms;
+	}
+	@keyframes right-3
+	{
+	0% {transform: translateY(-30px);}
+	100% {transform: translateY(30px);}
+	}
+	.box ul li:nth-child(4){
+		height: 20px;width: 20px; 
+		animation: right-4 1s infinite alternate;
+	  	background-color: #DDD833;
+	  	animation-delay: 400ms;
+	}
+	@keyframes right-4
+	{
+	0% {transform: translateY(-30px);}
+	100% {transform: translateY(30px);}
+	}
+/* box2 */
+	.circle {
+	  position: relative;
+	  height: 100px;
+	  width: 100px;
+	  margin-left: -51.2820512821px;
+	  border: 1px solid #213146;
+	  border-radius: 50%;
+
+	  
+	}
+	.circle::before {
+	  content: '';
+	  position: absolute;
+	  top: calc(50% - (20px / 2));
+	  left: calc(50% - (20px / 2));
+	  height: 20px;
+	  width: 20px;
+	  background: #fb1e7a;
+	  border-radius: 50%;
+	  opacity: 0;
+	}
+	.circle:nth-of-type(1)::before {
+	  -webkit-animation: rotate 2.5s 0.25s linear infinite, fadeIn 2.5s 0.25s linear 1 forwards;
+	          animation: rotate 2.5s 0.25s linear infinite, fadeIn 2.5s 0.25s linear 1 forwards;
+	}
+	.circle:nth-of-type(2)::before {
+	  -webkit-animation: rotate 2.5s 0.5s linear infinite, fadeIn 2.5s 0.5s linear 1 forwards;
+	          animation: rotate 2.5s 0.5s linear infinite, fadeIn 2.5s 0.5s linear 1 forwards;
+	}
+	.circle:nth-of-type(3)::before {
+	  -webkit-animation: rotate 2.5s 0.75s linear infinite, fadeIn 2.5s 0.75s linear 1 forwards;
+	          animation: rotate 2.5s 0.75s linear infinite, fadeIn 2.5s 0.75s linear 1 forwards;
+	}
+	.circle:nth-of-type(4)::before {
+	  -webkit-animation: rotate 2.5s 1s linear infinite, fadeIn 2.5s 1s linear 1 forwards;
+	          animation: rotate 2.5s 1s linear infinite, fadeIn 2.5s 1s linear 1 forwards;
+	}
+	@keyframes rotate {
+	  from {
+	    -webkit-transform: rotate(-180deg) translateY(50px) rotate(180deg);
+	            transform: rotate(-180deg) translateY(50px) rotate(180deg);
+	  }
+	  to {
+	    -webkit-transform: rotate(180deg) translateY(50px) rotate(180deg);
+	            transform: rotate(180deg) translateY(50px) rotate(180deg);
+	  }
+	}
+	@keyframes fadeIn {
+	  from {
+	    opacity: 0;
+	  }
+	  to {
+	    opacity: 1;
+	  }
+	}
+/* box3 */
+
+	.ground {
+		position: relative;
+		top: 120px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		background-color: #656d78;
+		height: 20px
+	}
+	.placement {
+		position: relative;
+         bottom: 0%;
+         left: 30%;
+         animation: placement-move 1.9s linear infinite;
+      }
+      .square {
+         width: 100px;
+         height: 100px;
+         background-color: #baa286;
+         transform-origin: 100px 100px;
+         animation: roll 1.9s linear infinite;
+      }
+	@keyframes placement-move {
+	   0% {
+	      transform: translateX(0px);
+	   }
+	   100% {
+	      transform: translateX(-100px);
+	   }
+	}
+	@keyframes roll {
+	   0% {
+	      transform: rotate(0deg);
+	   }
+	   5% {
+	      transform: rotate(12deg);
+	   }
+	   10% {
+	      transform: rotate(22.5deg);
+	   }
+	   20% {
+	      transform: rotate(38.5deg);
+	   }
+	   25% {
+	      transform: rotate(45deg);
+	   }
+	   34% {
+	      transform: rotate(60deg);
+	   }
+	   38% {
+	      transform: rotate(80deg);
+	   }
+	   40%,
+	   100% {
+	      transform: rotate(90deg);
+	   }
+	}
+	@keyframes shake {
+	   0%,
+	   39%,
+	   50%,
+	   100% {
+	      transform: translateY(0px);
+	   }
+	   42% {
+	      transform: translateY(-20px);
+	   }
+	   45% {
+	      transform: translateY(15px);
+	   }
+	   47% {
+	      transform: translateY(-10px);
+	   }
+	   49% {
+	      transform: translateY(5px);
+	   }
+	}
+</style>
+
+<body>
+	<div class="container">
+		<div class="box box1">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="box box2">
+			<div class='circle'></div>
+			<div class='circle'></div>
+			<div class='circle'></div>
+			<div class='circle'></div>
+		</div>
+		<div class="box box3">
+			<div class="ground"></div>
+			<div class="placement">
+				<div class="square"></div>
+			</div>
+	</div>
+</body>
+</html>
